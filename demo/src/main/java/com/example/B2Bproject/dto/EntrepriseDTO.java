@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 
 public class EntrepriseDTO {
-    private Long id;
+   
     @NotBlank
     @Size(min = 0, max = 30)
     private String nom;

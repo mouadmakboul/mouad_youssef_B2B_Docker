@@ -47,7 +47,7 @@ public class EntrepriseServiceImpl implements EntrepriseService {  //nom des cla
         if (!entrepriseRepository.existsById(id)) {
             throw new NoSuchElementException("Entreprise not found with id: " + id);
         }
-        entrepriseDTO.setId(id);
+      //  entrepriseDTO.setId(id);
         EntrepriseEntity entrepriseEntity = modelMapper.map(entrepriseDTO, EntrepriseEntity.class);
         entrepriseEntity = entrepriseRepository.save(entrepriseEntity);
         return modelMapper.map(entrepriseEntity, EntrepriseDTO.class);
