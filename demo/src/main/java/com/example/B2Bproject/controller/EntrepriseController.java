@@ -2,11 +2,11 @@ package com.example.B2Bproject.controller;
 
 import com.example.B2Bproject.dto.EntrepriseDTO;
 import com.example.B2Bproject.service.EntrepriseService;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.List;
 
@@ -15,6 +15,7 @@ import java.util.List;
 
 
 public class EntrepriseController {
+    private static final Logger logger = LoggerFactory.getLogger(EntrepriseController.class);
 
 
     private final EntrepriseService entrepriseService;
@@ -37,6 +38,7 @@ public class EntrepriseController {
 
     @GetMapping
     public ResponseEntity<List<EntrepriseDTO>> getAllEntreprises() {
+        logger.info("Fetching all entreprises with {}");
         List<EntrepriseDTO> entrepriseDTOs = entrepriseService.getAllEntreprises();
         return ResponseEntity.ok(entrepriseDTOs);
     }
