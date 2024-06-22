@@ -34,4 +34,4 @@ jobs:
       - name: Run Maven clean package
         run: |
              cd 'demo'
-             mvn clean package
+             mvn clean install package
