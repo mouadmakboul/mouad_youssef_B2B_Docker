@@ -35,3 +35,8 @@ jobs:
         run: |
              cd 'demo'
              mvn clean install package
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: demo-jar
+          path: demo/target/*.jar
