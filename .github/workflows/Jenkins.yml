@@ -40,3 +40,9 @@ jobs:
         with:
           name: demo-jar
           path: demo/target/*.jar
+      - name: Build Docker image and run container
+        run: |
+             cd 'demo'
+             docker build -t my-java-app -f Dockerfile .
+             docker run -d --name my-java-container my-java-app
+          
