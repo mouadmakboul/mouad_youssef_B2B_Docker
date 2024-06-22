@@ -32,4 +32,4 @@ jobs:
 
       # Runs a Maven command using the runners shell
       - name: Run Maven clean package
-        run: mvn -f C:/Users/Mouad/Downloads/B2B (2)/demo/pom.xml clean package
+        run: mvn -f C:/Users/Mouad/Downloads/B2Btwo/demo/pom.xml clean package
