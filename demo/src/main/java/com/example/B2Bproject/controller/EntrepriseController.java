@@ -50,7 +50,7 @@ public class EntrepriseController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteEntreprise(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteEntreprise(@PathVariable final Long id) {
         entrepriseService.deleteEntreprise(id);
         return ResponseEntity.noContent().build();
     }

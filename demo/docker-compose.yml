@@ -8,8 +8,11 @@ services:
       - "1015:8080"
     networks:
       - mouad-net
+    volumes:
+      - ./logs:/app/logs
     depends_on:
-        - postgres-sql
+      - postgres-sql
+
   postgres-sql:
     image: postgres
     container_name: postgres-sql
