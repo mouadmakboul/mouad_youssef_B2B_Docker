@@ -21,7 +21,7 @@ services:
       POSTGRES_USER: username
       POSTGRES_DB: mouad-demo
     ports:
-      - "1001:5432"
+      - "1001:5050"
     networks:
       - mouad-net
 
